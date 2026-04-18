@@ -1,0 +1,101 @@
+:root {
+    --bg-color: #e0e7ff;
+    --accent-color: #ff4757;
+    --text-main: #2f3542;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #1e1e2f, var(--bg-color));
+    color: var(--text-main);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    background: var(--accent-color);
+    color: white;
+    cursor: pointer;
+}
+
+/* Grid Layouts */
+.featured-grid,
+.sale-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* The Hover Animation */
+.book-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.book-card img {
+    width: 100%;
+    display: block;
+}
+
+/* Zoom Effect */
+.book-card:hover {
+    transform: scale(1.1); /* Increases size */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    z-index: 10; /* Ensures it stays on top of others */
+}
+
+/* Sale Styles */
+.sale-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.price span {
+    text-decoration: line-through;
+    color: #a4b0be;
+    margin-right: 10px;
+}
+
+.price {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+.sale-grid {
+    justify-content: center;
+}

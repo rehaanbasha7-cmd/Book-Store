@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            body {
+                color: white;
+                font-family: Arial;
+                background-color: black;
+            }
+            .box {
+                border: 1px solid white;
+                padding: 20px;
+                margin: 20px;
+                width: 900px;
+                color: white;
+                transition: all 0.3s ease;
+            }
+
+            .box img {
+                float: left;
+                margin-right: 20px;
+            }
+            .box:hover {
+                transform: scale(1.05);
+                border: 3px solid deepskyblue;
+            }
+            button {
+                width: 120px;
+                height: 40px;
+                font-size: 16px;
+                background-color: deepskyblue;
+                border: none;
+                color: white;
+                margin-left: 6%;
+            }
+            .btn:hover {
+                background-color: grey;
+            }
+            .back {
+                background-color: black;
+                color: White;
+                border: 2px solid grey;
+                margin-left: 10px;
+            }
+            .back:hover {
+                background-color: grey;
+            }
+        </style>
+
+        <title>contact</title>
+    </head>
+    <body>
+        <div class="w3-container w3-black">
+            <h1 style="text-align: center; color: green">Contact Us:</h1>
+        </div>
+        <a href="main.html"><button class="back">Back</button></a>
+        <h2 style="color: white">Our Locations:</h2>
+        <div class="box">
+            <img src="mumbai.jfif" width="250px" />
+
+            <h3 style="color: deepskyblue">Mumbai</h3>
+
+            <p>
+                The Mumbai branch provides library services and resource for
+                readers and researchers in the city.<br />
+                <b>Address:</b>152,Mahatma Gandhi Road,<br />kala Ghoda
+                Fort,Mumbai,Maharashtra 400-001.
+            </p>
+        </div>
+        <br />
+        <div class="box">
+            <img src="chennai.jfif" width="200px" />
+
+            <h3 style="color: deepskyblue">Chennai</h3>
+            <p>
+                Our Library Branch is located in Chennai to provide books and
+                digital resources for readers in TamilNadu.<br />
+                <b>Address:</b>290,Anna Nagar,post office road,Chennai,TamilNadu
+                600-007.
+            </p>
+        </div>
+        <br />
+        <div class="box">
+            <img src="hyd.jfif" />
+
+            <h3 style="color: deepskyblue">Hyderabad</h3>
+            <p>
+                This Branch serves students and readers in hyderabad with
+                various academic and reference materials.<br />
+                <b>Address:</b>42 Linking Road,Banjara Hills Road
+                no.12,Hyderabad Telangana 560-001.
+            </p>
+        </div>
+        <br />
+        <div class="box">
+            <img src="bang.jfif" width="150px" />
+
+            <h3 style="color: deepskyblue">Bangalore</h3>
+            <p>
+                The Bangalore Branch offers a wide collection of technical and
+                educational books for users.<br />
+                <b>Address:</b> 12 MG Road,Ashok Nagar,Bangalore Karnataka
+                500-034.
+            </p>
+        </div>
+        <br />
+        <form>
+            <label for="Comment" style="color: white">Comment:</label><br />
+            <textarea
+                rows="5"
+                cols="70"
+                id="Comment"
+                style="
+                    background-color: black;
+                    color: white;
+                    font-size: 140%;
+                    margin-left: 6%;
+                "
+                id="demo"
+            ></textarea>
+        </form>
+        <button class="btn" onclick="submitFeedback()">
+            <b>Submit</b>
+        </button>
+        <p style="font-size: 140%">
+            <b>Contact to below number/Email for any information</b>
+        </p>
+        <table>
+            <tr>
+                <td>
+                    <img
+                        src="call.png"
+                        alt="phone number:"
+                        style="width: 40px"
+                    />
+                </td>
+                <td style="color: deepskyblue">
+                    <p><b>7981728539</b></p>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <img src="email.jfif" style="width: 40px" />
+                </td>
+                <th style="color: deepskyblue">
+                    <p><b>library@example.com</b></p>
+                </th>
+            </tr>
+        </table>
+
+        <script>
+            function submitFeedback() {
+                const commentBox = document.getElementById("Comment");
+                const comment = commentBox.value.trim();
+
+                if (comment === "") {
+                    alert(
+                        "Please write something in the comment box before submitting!",
+                    );
+                    return;
+                }
+                alert("Your Feedback is submitted successfully!");
+                commentBox.value = "";
+            }
+        </script>
+    </body>
+</html>
